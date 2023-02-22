@@ -21,5 +21,7 @@ head(case)
 case2 <- select(case, CCCC_121, CCCC_051,CCCC_05A,DHHCGAGE,DHHC_SEX,DHHCGMS,SDCCGRAC,SDCCFIMM,SDCCGRES,EDUCDR04,INCCGHH,HWTCGBMI,PACCDPAI,HCUC_1AA,SMKCDSTY,ALCCDTYP,CCCC_071,CCCC_101,CCCC_91B,FVCCDTOT,GENC_07,GEOCGPRV,WTSC_M)
 head(case2)
 write.csv(case2, "desktop\\casestudy\\case2.csv", row.names=FALSE)
+#colnames(df) <- c("Student_name", "Math_marks","English_marks"
+case3 <- colnames(case2)<-c("heart_disease","arthritis_rheumatism","Kind_of_arthritis","Age","Sex","Marital_Status","Cultural","Immigrant_status","time_in_canada","education","income","BMI","PAI","doctor","smoker","drinker","high_blood_pressure","diabetes","emphysema_COPD","Daily_consumption","stress","province","Sampling_weight"))
 ```
 
