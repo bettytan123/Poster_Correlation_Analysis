@@ -1,0 +1,25 @@
+---
+title: "casestudy2019"
+output: pdf_document
+date: "2023-02-21"
+---
+
+## case study 2019 cycle 2.1 
+variable: 
+y: Has heart disease (Outcome. Only “YES” and “NO” are considered valid responses)
+
+x:
+
+1. Has arthritis or rheumatism (CCCC_051) Those who answered ‘NO’ are considered as ‘NOT APPLICABLE’ in the next variable ‘kind of arthritis’.
+  
+2. Kind of arthritis (CCCC_05A) 
+
+```{r}
+library(dplyr)
+case <- read.csv("cchs-82M0013-E-2003-C2-1-GeneralFile_F1.csv")
+head(case)
+case2 <- select(case, CCCC_121, CCCC_051,CCCC_05A,DHHCGAGE,DHHC_SEX,DHHCGMS,SDCCGRAC,SDCCFIMM,SDCCGRES,EDUCDR04,INCCGHH,HWTCGBMI,PACCDPAI,HCUC_1AA,SMKCDSTY,ALCCDTYP,CCCC_071,CCCC_101,CCCC_91B,FVCCDTOT,GENC_07,GEOCGPRV,WTSC_M)
+head(case2)
+write.csv(case2, "desktop\\casestudy\\case2.csv", row.names=FALSE)
+```
+
